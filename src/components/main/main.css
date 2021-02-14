@@ -78,12 +78,14 @@
     
    font-size: 35px;
    letter-spacing: 5px;
+ 
    
 }
 
 .Move-Menu:hover{
     width: 40%;
     opacity: 1;
+    
 }
 
 @media(max-width:777px){

@@ -35,7 +35,8 @@ let Main = (props)=>{
 
                     <div className="Move-Menu">
 
-                    <NavLink to="/#"> <div className="Move-Menu__item"> головные уборы </div></NavLink>
+                    <NavLink to="/#"> <div className="Move-Menu__item"> шапки</div></NavLink>
+                    <NavLink to="/#"> <div className="Move-Menu__item"> кепки</div></NavLink>
                     <NavLink to="/#"><div className="Move-Menu__item"> шарфы </div></NavLink>
                     <NavLink to="/#"><div className="Move-Menu__item"> платки </div></NavLink>
                     <NavLink to="/#"> <div className="Move-Menu__item"> перчатки </div></NavLink>
@@ -49,9 +50,11 @@ let Main = (props)=>{
 
                     <div className="Move-Menu">
 
-                    <NavLink to="/#"> <div className="Move-Menu__item"> головные уборы</div></NavLink>
-                    <NavLink to="/#"> <div className="Move-Menu__item"> шарфы </div></NavLink>
-                    <NavLink to="/#"><div className="Move-Menu__item"> перчатки </div></NavLink>
+                    <NavLink to="/#"> <div className="Move-Menu__item"> шапки</div></NavLink>
+                    <NavLink to="/#"> <div className="Move-Menu__item"> кепки</div></NavLink>
+                    <NavLink to="/#"><div className="Move-Menu__item"> шарфы </div></NavLink>
+                    <NavLink to="/#"><div className="Move-Menu__item"> платки </div></NavLink>
+                    <NavLink to="/#"> <div className="Move-Menu__item"> перчатки </div></NavLink>
                        
                         
                     </div>
@@ -64,7 +67,7 @@ let Main = (props)=>{
 
                     <div className="Move-Menu">
 
-                    <NavLink to="/#"><div className="Move-Menu__item"> головные уборы</div></NavLink>
+                    
                     <NavLink to="/#"> <div className="Move-Menu__item"> шарфы </div></NavLink>
                     <NavLink to="/#"><div className="Move-Menu__item"> перчатки </div></NavLink>
 
