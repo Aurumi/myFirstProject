@@ -1,0 +1,46 @@
+.header{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    z-index: 9999;
+    grid-area: header;
+    position: fixed;
+    
+}
+
+.header__navigation{
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content:space-evenly;
+    text-transform: uppercase;
+    align-items: center;
+
+}
+
+.header__navigation a{
+    text-decoration: none;
+    color:white;
+}
+
+.header__navigation a :hover{
+    
+    color:red;
+}
+
+
+@media(max-width:777px){
+    .header__navigation{
+        
+        display: none;
+    
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
