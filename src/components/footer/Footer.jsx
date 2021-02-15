@@ -40,13 +40,13 @@ let Footer = (props)=>{
         setToogle(!toogle)
         let widthObject = document.querySelector(".section-navigation-spoler__info")
         
-         if(toogle===true){
+        //  if(toogle===true){
 
-            widthObject.style.height=180+"px";
-            widthObject.style.display="block";
+        //     widthObject.style.height=180+"px";
+        //     widthObject.style.display="block";
            
-         }else
-         widthObject.style.height=0+"px";
+        //  }else
+        //  widthObject.style.height=0+"px";
         
          
          
