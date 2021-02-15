@@ -101,7 +101,8 @@ margin-top: 15px;
   .section-navigation-spoler__info{
       background-color: red;
       transition: all 0.7s ease 0s;
-      height: 0px;
+      margin-top: 5px;
+      /* height: 30px; */
       
      
      

@@ -8,56 +8,35 @@ import { Transition } from "react-spring/renderprops";
 
 let Footer = (props)=>{
 
-    const [toogle , setToogle] = useState(false)
+    
+const [stateSpoler, setStateSpoler] = useState([
+
+ {id:1,tittle:"Купить", listInfo:["Женщинам", "Мужичинам","Детям" ,"A&M"] ,toogle:false},
+ {id:2,tittle:"Информация о компании", listInfo:["карьера в A&M", "пресса","для инвесторов"] ,toogle:false},
+ {id:3,tittle:"Помощь" ,listInfo:["найти магазин", "контакты"],toogle:false},
+
+]
+
+)
 
 
-    // const [widths, setWidth] =useState(123)
 
- 
-    // useEffect((widths)=>{
-      
-    //     let widthObject = document.querySelector(".section-navigation-spoler__info")
-    //     widths=widthObject.clientHeight;
-    //     setWidth(widths)
-    //     console.log(widths)
-        
-
-    // },[widths])
+const SpolerItem =(props)=>{
 
 
+return   <div className="section-navigation-spoler__item">{props.tittle}
+         <div className="plus" onClick={()=>{props.setStateSpoler([...stateSpoler])}}></div>
+         <div className="section-navigation-spoler__info" >
+
+             {props.listInfo.map(item=>{
+                 return  props.toogle && <div>{item}</div>
+             })}
+         </div>
+     </div>
+
+}
     
    
-    // const animation = useSpring({
-
-    //     to:{height:"80px", opacity:1},
-    //     from:{height:"10px",opacity:0},
-    //     config:{duration:1500}
-
-    // })
-
-    let Toogle =()=>{
-       console.log("click")
-        setToogle(!toogle)
-        let widthObject = document.querySelector(".section-navigation-spoler__info")
-        
-         if(toogle===true){
-
-            widthObject.style.height=180+"px";
-            widthObject.style.display="block";
-           
-         }else
-         widthObject.style.height=0+"px";
-        
-         
-         
-            
-            
-        
-
-        
-        
-      
-    }
 
     return <footer className="footer">
                 
@@ -67,20 +46,29 @@ let Footer = (props)=>{
 
                   <div className="section-navigation-spoler">
 
-                      <div className="section-navigation-spoler__item">Купить
-                      <div className="plus" onClick={Toogle}></div>
+                      {stateSpoler.map( element =>{
+                           
+                           return <SpolerItem  key={element.id} tittle={element.tittle} listInfo={element.listInfo} toogle={element.toogle} setStateSpoler={setStateSpoler}/>
 
-  
- 
+                      })}
 
-                       <div  className="section-navigation-spoler__info" > px</div> 
+
+
+                      {/* <div className="section-navigation-spoler__item">Купить
+                      <div className="plus"></div>
+                      <div  className="section-navigation-spoler__info" >
+
+
+                      </div> 
+
+
                       </div>
                       <div className="section-navigation-spoler__item">Информация о компании
-                      <div className="plus"></div>
+                      <div className="plus" ></div>
                       </div>
                       <div className="section-navigation-spoler__item">помощь
-                      <div className="plus"></div>
-                      </div>
+                      <div className="plus" ></div>
+                      </div> */}
                       
                   </div>
 
