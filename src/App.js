@@ -1,11 +1,12 @@
 
 import './App.css';
-import Footer from './components/footer/Footer';
+import Footer from './components/footer/ContainerFooter';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 
 
-function App() {
+
+function App(props) {
 
   return <div className="Wrapper-App">
 
@@ -19,9 +20,9 @@ function App() {
         <Main/>
 
       </div>
-
+   
   <Footer/>
-  
+  {/* <ContainerFooter/> */}
 </div>
 
 
