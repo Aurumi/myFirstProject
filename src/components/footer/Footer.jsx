@@ -3,61 +3,53 @@ import {useSpring, animated} from 'react-spring'
 import "./footer.css"
 import instagram from "../../image/iconsSocialNetworks/iconsInstagram.png"
 import viber from "../../image/iconsSocialNetworks/iconsViber.png"
-import { Transition } from "react-spring/renderprops";
+import { Spring, Transition } from "react-spring/renderprops";
 
 
 let Footer = (props)=>{
 
-    const [toogle , setToogle] = useState(false)
-
-
-    // const [widths, setWidth] =useState(123)
-
- 
-    // useEffect((widths)=>{
-      
-    //     let widthObject = document.querySelector(".section-navigation-spoler__info")
-    //     widths=widthObject.clientHeight;
-    //     setWidth(widths)
-    //     console.log(widths)
+    
+// let array = null;
+// let [toogle ,setToogle] = useState()
+let toogle = false ;
+    
+   
+useEffect(()=>{
+    
+    toogle = Array.from(document.querySelectorAll(".plus")) 
+     let toogle2 = Array.from(document.querySelectorAll(".section-navigation-spoler__info"))
+     console.log(toogle)
+    
+    toogle.map( element =>{
         
+        element.onclick = (event)=>{
+               
+            toogle2.map( elements=>{
 
-    // },[widths])
+                if(element.id === elements.id){
+                    toogle = true
+                    elements.style.display ="block"
+
+                }
+               
+            })
+            
+        }
+        // console.log( typeof (element))
+    })
+
+    }
+
+
+,[toogle])
+ 
+    
 
 
     
    
-    // const animation = useSpring({
-
-    //     to:{height:"80px", opacity:1},
-    //     from:{height:"10px",opacity:0},
-    //     config:{duration:1500}
-
-    // })
-
-    let Toogle =()=>{
-       console.log("click")
-        setToogle(!toogle)
-        let widthObject = document.querySelector(".section-navigation-spoler__info")
-        
-        //  if(toogle===true){
-
-        //     widthObject.style.height=180+"px";
-        //     widthObject.style.display="block";
-           
-        //  }else
-        //  widthObject.style.height=0+"px";
-        
-         
-         
-            
-            
-        
-
-        
-        
-      
-    }
+    
+    
 
     return <footer className="footer">
                 
@@ -68,18 +60,21 @@ let Footer = (props)=>{
                   <div className="section-navigation-spoler">
 
                       <div className="section-navigation-spoler__item">Купить
-                      <div className="plus" onClick={Toogle}></div>
+                      <div  id="1" className="plus" ></div>
 
-  
+                                  
+                 
+                  <div id="1" style={props} className="section-navigation-spoler__info" >123</div>
  
 
-                       <div  className="section-navigation-spoler__info" > px</div> 
+                       
                       </div>
                       <div className="section-navigation-spoler__item">Информация о компании
-                      <div className="plus"></div>
+                      <div id="2" className="plus"></div>
+                      <div id="2" style={props} className="section-navigation-spoler__info" >234</div>
                       </div>
                       <div className="section-navigation-spoler__item">помощь
-                      <div className="plus"></div>
+                      <div id="3" className="plus"></div>
                       </div>
                       
                   </div>
@@ -115,9 +110,9 @@ let Footer = (props)=>{
 
 
                   <div className="social-icons">
-
+                             
                       <img src={instagram } alt="instagram"/>
-                      <img  src={viber} alt="viber"/>
+                      <img src={viber} alt="viber"/>
                   </div>
 
 
