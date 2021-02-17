@@ -22,7 +22,7 @@
    
 }
 .section-navigation__item{
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: smaller;
 }
 .section-navigation__tittle{
@@ -110,11 +110,14 @@ margin-top: 25px;
   .section-navigation-spoler__info{
       
       background-color: rgb(192, 181, 181);
-      transition: all 0.7s ease 0s;
+      
+     
       margin-top: 10px;
       
   
   }
+
+
 
   .section-navigation-spoler__info div{
       
@@ -123,6 +126,8 @@ margin-top: 25px;
     
 
 }
+
+
 
   
 @media(max-width:777px){

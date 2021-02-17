@@ -1,19 +1,31 @@
 import React from "react";
 import "./burger.css"
-import {Spring} from 'react-spring/renderprops'
+
+import { Transition } from 'react-transition-group';
 
 let BurgerNavigation =(props)=>{
 
-  
-  return <nav className="burger-navigation">
-   <div className="burger-navigation__item"> <div onClick={props.closeBurgerAc} className="burger-cross"><span></span></div></div>
-   <div className="burger-navigation__item">женщины</div>
-   <div className="burger-navigation__item">мужчины</div>
-   <div className="burger-navigation__item">дети</div>
-   <div className="burger-navigation__item">корзина</div>
-   <div className="burger-navigation__item">регистрация</div>
+  return (
 
-  </nav>
+    <Transition in={props.toogle} timeout={400} mountOnEnter unmountOnExit>
+          
+    { state=> <nav className={`burger-navigation ${state}`}>
+
+      <div className="burger-navigation__item">женщины</div>
+
+      <div className="burger-navigation__item">мужчины</div>
+
+      <div className="burger-navigation__item">дети</div>
+
+      <div className="burger-navigation__item">корзина</div>
+
+      <div className="burger-navigation__item">регистрация</div>
+
+      </nav>}
+
+      </Transition>
+
+  )
 }
 
 
@@ -21,24 +33,15 @@ let Burger = (props)=>{
 
     return  <>
     
-     {props.toogle === true  ? 
-     
-     <BurgerNavigation {...props} closeBurgerAc={props.closeBurgerAc}/>
+       {props.toogle === false  ?  <div className="burger" onClick={props.openBurgerAc}> <span> </span></div>:
 
-    //  <div className="burger-cross"><span></span></div>
-     
-     
-     
-     :
-                
+      
+        <div className="burger-cross" onClick={props.closeBurgerAc}> <span> </span></div>}
+        
+        
+     < BurgerNavigation {...props} />
 
-              
-     <div className="burger" onClick={props.openBurgerAc}> <span> </span></div> } 
-                
-
-               
-             
-              
+                       
 </>
 
 }

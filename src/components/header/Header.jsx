@@ -13,7 +13,7 @@ let Header = (props)=>{
                 <NavLink to="/"> <div className="header__element"> мужчины     </div></NavLink> 
                 <NavLink to="/"> <div className="header__element"> дети        </div></NavLink> 
                 <NavLink to="/"> <div className="header__element"> корзина     </div></NavLink>
-                <NavLink to="/"> <div className="header__element"> регистарция </div></NavLink>
+                <NavLink to="/Shop"> <div className="header__element"> магазин </div></NavLink>
                     
                 </nav>
         

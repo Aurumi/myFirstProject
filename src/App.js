@@ -1,8 +1,10 @@
 
+import { Redirect, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/ContainerFooter';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
+import Shop from './components/Shop/ContainerShop';
 
 
 
@@ -16,9 +18,10 @@ function App(props) {
   <Header/>
       
       <div className="Change-content">
+      <Redirect from ="/" to="/main"></Redirect>
+      <Route path="/main" render = {()=><Main/> }></Route> 
         
-        <Main/>
-
+        <Route path="/Shop" render={()=><Shop/>}></Route>
       </div>
    
   <Footer/>
