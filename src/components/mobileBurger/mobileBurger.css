@@ -1,0 +1,126 @@
+.mobile-burger {
+    z-index: 2;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      display: none;
+      margin-top: 135px;
+      margin-left: 3px;
+    }
+  .mobile-burger:before, .mobile-burger:after {
+    
+      content: '';
+      background-color: black;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+    .mobile-burger:before {
+      top: 0;
+    }
+    .mobile-burger:after {
+      bottom: 0;
+    }
+    .mobile-burger span {
+      position: absolute;
+      background-color: black;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+    }
+    .mobile-burger-cross {
+      z-index: 2;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      display: none;
+      margin-top: 135px;
+      
+    }
+  .mobile-burger-cross:before, .mobile-burger-cross:after {
+      content: '';
+      background-color: black;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+    .mobile-burger-cross:before {
+      top: 0;
+    }
+    .mobile-burger-cross:after {
+      bottom: 0;
+    }
+    .mobile-burger-cross span {
+      position: absolute;
+      /* background-color: black; */
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      opacity: 0;
+      
+    }
+    .mobile-burger-cross:before {
+      top: 9px;
+      transform: rotate(45deg);;
+    }
+    .mobile-burger-cross:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    .mobile-burger-navigation{
+        position: absolute;
+      display: none;
+        
+        margin-top: 10px;
+        background-color: black;
+    }
+
+    .mobile-burger-navigation.entering{
+   
+        animation: show-mobile-navigation 0.5s ease;
+          }
+          .mobile-burger-navigation.entered{
+            
+          }
+          .mobile-burger-navigation.exiting{
+        
+            animation: show-mobile-navigation 0.5s ease reverse;
+            
+          }
+          .mobile-burger-navigation.exited{ 
+          }
+          .mobile-burger-navigation__item{
+             margin-bottom: 10px;
+             color: white;
+          }
+          
+        @keyframes show-mobile-navigation {
+        
+          0%{
+              width: 0px;
+           /* transform:translateX(-150px); */
+          }
+          100%{
+              width: 500px;
+            /* transform:translateX(0px); */
+          }
+        }
+
+        @media(max-width:1100px){
+            .mobile-burger{
+                display: block;
+            }
+            .mobile-burger-cross {
+                display: block;
+            }
+            .mobile-burger-navigation{
+                display: block;
+            }
+        }

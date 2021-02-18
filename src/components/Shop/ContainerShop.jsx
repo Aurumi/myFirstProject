@@ -1,11 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
+import { connect } from "react-redux"
 import Shop from "./Shop"
 
 
 
-let ContainerShop =()=>{
+let ContainerShop =(props)=>{
 
-    return  <Shop/>
+    let [toogle, setToogle] = useState(false)
+    return  <Shop {...props} toogle={toogle } setToogle={setToogle}/>
 }
 
-export default ContainerShop
+let mapStateToProps=(state)=>{
+
+    return {
+
+        womanDresses:state.shop.womanDresses
+
+    }
+}
+
+
+
+export default connect(mapStateToProps,{})(ContainerShop )
