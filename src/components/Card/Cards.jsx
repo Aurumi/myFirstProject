@@ -15,11 +15,11 @@ let Cards =(props)=>{
  <div className="container-card">
        {props.thing.map(item=>{
          
-         return <div key={item.id} className="card">
-               <img src={item.img}/>
+         return <div onMouseEnter={()=>{props.switchImgMoveAc(item.id)}} onMouseLeave={()=>{props.switchImgLeaveAc(item.id)}}  key={item.id} className="card">
+               <img src={ item.switch ?item.img2:item.img}/> 
                      <div className="card__tittle">{item.tittle}</div>
                      <div className="card__price">{item.price} б.руб</div>
-                     <div style={{background:item.color}} className="card__color"></div>
+                     {/* <div style={{background:item.color}} className="card__color"></div> */}
 
            </div>
            

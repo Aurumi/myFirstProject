@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
+import { switchImgLeaveAc, switchImgMoveAc } from "../../redux-store/shop-reducer"
 import Shop from "./Shop"
 
 
 
 let ContainerShop =(props)=>{
 
-    let [toogle, setToogle] = useState(false)
-    return  <Shop {...props} toogle={toogle } setToogle={setToogle}/>
+    return  <Shop {...props}  switchImgMoveAc={props.switchImgMoveAc} switchImgLeaveAc={props.switchImgLeaveAc} />
 }
 
 let mapStateToProps=(state)=>{
@@ -21,4 +21,6 @@ let mapStateToProps=(state)=>{
 
 
 
-export default connect(mapStateToProps,{})(ContainerShop )
+
+
+export default connect(mapStateToProps,{switchImgMoveAc,switchImgLeaveAc})(ContainerShop )

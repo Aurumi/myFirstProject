@@ -15,7 +15,7 @@ let BurgerNavigation =(props)=>{
 
       <div className="burger-navigation__item">мужчины</div>
 
-      <div className="burger-navigation__item">дети</div>
+      <div className="burger-navigation__item">магазин</div>
 
       <div className="burger-navigation__item">корзина</div>
 

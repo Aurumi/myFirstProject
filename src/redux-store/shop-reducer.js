@@ -9,6 +9,10 @@ import dressChine2 from "./../image/models/womanDresses/dressChine2.jpg"
 import dressDot1 from "./../image/models/womanDresses/dressDot1.jpg"
 import dressDot2 from "./../image/models/womanDresses/dressDot2.jpg"
 
+
+const SWITCH_IMG_MOVE = "SWITCH_IMG_MOVE"
+const SWITCH_IMG_LEAVE ="SWITCH_IMG_LEAVE"
+
 let initialState = {
 
     womanDresses:[
@@ -32,11 +36,31 @@ let shopReducer  = (state = initialState , action) =>{
 
     switch( action.type ){
 
+           case SWITCH_IMG_MOVE :
 
+           return {...state,womanDresses:state.womanDresses.map(item=>{
+               
+            if(item.id === action.id){
+               return {...item,switch:true}
+            }
+            return {...item,switch:false}
+           })}
+
+
+        //    case SWITCH_IMG_LEAVE :
+        //        return {...state,womanDresses:state.womanDresses.map(item=>{
+        //            if(item.id===action.id){
+        //                return {...item,switch:false}
+        //            }
+        //            return item 
+        //        })}
 
         default:return state
     }
 
 }
+
+ export const switchImgMoveAc =(id)=>({type:SWITCH_IMG_MOVE,id})
+ export const switchImgLeaveAc =(id)=>({type:SWITCH_IMG_LEAVE,id})
 
 export default shopReducer
