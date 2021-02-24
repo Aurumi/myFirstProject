@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { NavLink, Router } from "react-router-dom";
 import Cards from "../Card/Cards";
 import MobileBurger from "../mobileBurger/ContainerMobileBurger";
+import ContainerProductPage from "../productPage/ContainerProductPage";
 
 
 import "./shop.css"
@@ -27,7 +28,7 @@ const Shop =(props)=>{
           </div>
 
               <div className="navigation-shop__tittle">женщины</div>
-             <NavLink to="/"><div className="navigation-shop__item">платья</div> </NavLink> 
+             <NavLink activeStyle={{color:"red"}} to="/Shop/womanDresses"><div className="navigation-shop__item">платья</div> </NavLink> 
              <NavLink to="/"><div className="navigation-shop__item">платки</div></NavLink> 
              <NavLink to="/"><div className="navigation-shop__item">шарфы</div></NavLink>
              <NavLink to="/"><div className="navigation-shop__item">перчатки</div></NavLink>
@@ -45,8 +46,8 @@ const Shop =(props)=>{
           <div className="cards-shop">
 
              {/* <Router path="/Shop/womanDresses" render={()=>{<Cards/>}}></Router> */}
-            
-                   <Cards thing={props.womanDresses} switchImgLeaveAc={props.switchImgLeaveAc} switchImgMoveAc={props.switchImgMoveAc} />
+              
+                   <Cards thing={props.womanDresses} getInfoProductAc={props.getInfoProductAc} switchImgLeaveAc={props.switchImgLeaveAc} switchImgMoveAc={props.switchImgMoveAc} />
           </div>
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
+import { getInfoProductAc } from "../../redux-store/productPage-reducer"
 import { switchImgLeaveAc, switchImgMoveAc } from "../../redux-store/shop-reducer"
 import Shop from "./Shop"
 
@@ -7,7 +8,7 @@ import Shop from "./Shop"
 
 let ContainerShop =(props)=>{
 
-    return  <Shop {...props}  switchImgMoveAc={props.switchImgMoveAc} switchImgLeaveAc={props.switchImgLeaveAc} />
+    return  <Shop {...props}  getInfoProductAc={props.getInfoProductAc} switchImgMoveAc={props.switchImgMoveAc} switchImgLeaveAc={props.switchImgLeaveAc} />
 }
 
 let mapStateToProps=(state)=>{
@@ -23,4 +24,5 @@ let mapStateToProps=(state)=>{
 
 
 
-export default connect(mapStateToProps,{switchImgMoveAc,switchImgLeaveAc})(ContainerShop )
+
+export default connect(mapStateToProps,{switchImgMoveAc,switchImgLeaveAc,getInfoProductAc})(ContainerShop )

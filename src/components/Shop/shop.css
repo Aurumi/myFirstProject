@@ -93,7 +93,8 @@ margin-top: 60px;
 @media(max-width:1100px){
   
     .absolute{
-        display: block;
+        /* display: block; */
+        display: none;
       
     }
 }
