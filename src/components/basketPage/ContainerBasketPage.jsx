@@ -1,29 +1,34 @@
-import React from "react";
-import { connect } from "react-redux";
-import { closeBurgerAc, openBurgerAc } from "../../redux-store/burger-reducer";
-import BasketPage from "./BasketPage";
+import React, { useState } from "react"
+import { connect } from "react-redux"
+import { deleteProductAc } from "../../redux-store/productPage-reducer"
+
+import BasketPage from "./BasketPage"
 
 
 
 
+let ContainerBasketPage =(props)=>{
 
-let ContainerBasketPage=(props)=>{
-    
-    return <BasketPage {...props}/>
+    let arr=props.basketProduct
+    let sum = 0
+     for(var obj in arr ){  
+ 
+         sum +=arr[obj].price
+     }
+
+    return <BasketPage {...props} sum={sum}  deleteProductAc={props.deleteProductAc}/>
+
+
 }
 
-const mapStateToProps = (state)=>{
-    
+
+
+ let mapStateToProps =(state)=>{
+
     return {
 
         basketProduct:state.productPage.basketProduct
-       
     }
 }
 
-
-
-
-
-
-export default connect(mapStateToProps,{openBurgerAc,closeBurgerAc})(ContainerBasketPage)
+export default connect(mapStateToProps,{deleteProductAc})(ContainerBasketPage )

@@ -62,5 +62,6 @@ let shopReducer  = (state = initialState , action) =>{
 
  export const switchImgMoveAc =(id)=>({type:SWITCH_IMG_MOVE,id})
  export const switchImgLeaveAc =(id)=>({type:SWITCH_IMG_LEAVE,id})
+ 
 
 export default shopReducer

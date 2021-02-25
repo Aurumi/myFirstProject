@@ -1,0 +1,111 @@
+.Basket-Page-Wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .Basket-Page-Wrapper-container {
+    margin: 0 auto;
+    max-width: 100%;
+    /* background-color: red; */
+    height: 100vh;
+  }
+  
+  .Basket-Page-tittle {
+    padding-top: 120px;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  
+  .Basket-Page-section-left {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    float: left;
+  }
+  
+  .Basket-Page-section-right {
+    /* background-color: black; */
+    width: 50%;
+    float: right;
+  }
+  
+  .Basket-Page-product {
+    display: flex;
+    max-height: 200px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .Basket-Page-product img {
+    width: 170px;
+    height: 200px;
+  }
+  
+  .Basket-Page-product_infoProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  
+  .Basket-Page-product_tittle {
+    min-width: 100px;
+  }
+  
+  .crossClose {
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .Basket-Page-section-right_ProductSumm {
+    font-size: 20px;
+    border-bottom: 2px solid black;
+  }
+  
+  .Basket-Page-section-right_chekoutButton {
+    background-color: black;
+    color: white;
+    max-width: 200px;
+  }
+  
+  .crossClose:before, .crossClose:after {
+    content: '';
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+  }
+  
+  .crossClose:after {
+    transform: rotate(-45deg);
+    margin-bottom: 9px;
+  }
+  
+  .crossClose:before {
+    transform: rotate(45deg);
+    margin-top: 0px;
+  }
+  
+  .Basket-Page-section-right_chekoutButtonss {
+    margin-top: 15px;
+    display: inline-block;
+  }
+  
+  @media (max-width: 777px) {
+    .Basket-Page-section-left {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .Basket-Page-section-right {
+      width: 100%;
+    }
+    .Basket-Page-tittle {
+      padding-top: 20px;
+    }
+  }
+  /*# sourceMappingURL=basketPage.css.map */

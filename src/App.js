@@ -1,6 +1,7 @@
 
 import { Redirect, Route } from 'react-router-dom';
 import './App.css';
+import BasketPage from './components/basketPage/ContainerBasketPage';
 import Footer from './components/footer/ContainerFooter';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
@@ -24,6 +25,7 @@ function App(props) {
       <Route path="/main" render = {()=><Main/> }></Route> 
         <Route path ="/productPage" render={()=><ProductPage/>}/>
         <Route path="/Shop" render={()=><Shop/>}></Route>
+        <Route path="/basketPage" render={()=><BasketPage/>}></Route>
       </div>
    
   <Footer/>
